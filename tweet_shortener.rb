@@ -28,7 +28,7 @@ end
 
 def shortened_tweet_truncator(tweet)
   tweet_adj = selective_tweet_shortener(tweet)
-  if tweet_adj == 140
+  if tweet_adj.length >= 140
     new_tweet = tweet_adj[0..136]
     new_tweet << "..."
     new_tweet
